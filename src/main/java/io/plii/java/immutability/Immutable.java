@@ -11,8 +11,8 @@ package io.plii.java.immutability;
  * <p>
  * The state from an instance of this class must not be observable by callers, which implies that
  * <ul>
- * <li> all public fields are final, </li>
- * <li> all public final reference fields refer to other immutable objects, and </li>
+ * <li> all {@code public} fields are {@code final}, </li>
+ * <li> all {@code public final} reference fields refer to other immutable objects, and </li>
  * <li> constructors and methods do not publish references to any internal state
  *      which is potentially mutable by the implementation. </li>
  * </ul>
@@ -23,15 +23,4 @@ package io.plii.java.immutability;
  * Immutable objects are inherently thread-safe; they may be passed between threads or
  * published without synchronization.
  */
-public interface Immutable {
-  //TODO: integrate into Javadoc above, and then delete
-  //Excellent libraries to possibly include:
-    //https://immutables.github.io/
-    //https://projectlombok.org/
-
-    //really good overview of integrity checking of the Java ecosystem:
-    //https://checkerframework.org/manual/
-
-  //Immutable annotation JavaDoc: https://jcip.net/annotations/doc/index.html
-  //  Source Code: https://github.com/chrisoei/JCIP
-}
+public interface Immutable {}
